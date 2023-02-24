@@ -3,7 +3,7 @@ import React from "react";
 export const CardSection = () => {
   return (
     <>
-      <div className="flex flex-row bg-slate-100 items-center justify-center flex-wrap gap-20 py-8">
+      <div className="flex flex-row bg-slate-100 items-center justify-center flex-wrap gap-20 py-32">
         <div className="h-40 w-40 gap-4 border flex flex-col items-center font-semibold text-lg text-slate-500 bg-white justify-center hover:scale-125 cursor-pointer transition-transform">
           <img
             className="h-12"

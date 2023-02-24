@@ -2,6 +2,8 @@ import { Navbar } from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart";
 import { HomePage } from "./components/HomePage";
+import { CheckoutForm } from "./components/CheckoutForm";
+import { Checkout } from "./components/Checkout";
 function App() {
   return (
     <>
@@ -9,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkoutForm" element={<CheckoutForm />} />
+        <Route path="/order-complete" element={<Checkout />} />
       </Routes>
 
       {/* <img

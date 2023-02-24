@@ -7,10 +7,6 @@ export const Map = () => {
         <iframe
           width="50%"
           height="500"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lovely%20Professional%20University+(My%20Business%20Name)&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.maps.ie/distance-area-calculator.html">

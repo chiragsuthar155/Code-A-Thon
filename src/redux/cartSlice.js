@@ -10,6 +10,7 @@ const cartSlice = createSlice({
     add(state, action) {
       // Redux: we can directly mutate state using redux toolkit.
       const productObj = action.payload;
+      console.log(productObj);
       const product = state.find((item) => item.code === productObj.code);
       if (product) {
         product.qty++;
