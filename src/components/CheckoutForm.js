@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import { FormInput } from "./FormInput";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-export const CheckoutForm = () => {
+export const CheckoutForm = ({ setFormData }) => {
   const items = useSelector((store) => store.cart);
   const [values, setValues] = useState({
-    username: "",
     email: "",
-    birthday: "",
   });
 
   const inputs = [
     {
       id: 1,
-      name: "Phone-Number",
+      name: "contactno",
       type: "tel",
       placeholder: "Phone-Number",
       errorMessage:
         "Phone-Number should be 0-9 characters and shouldn't include any special character!",
-      label: "Phone-Number",
+      label: "contactno",
       pattern: "^[0-9]{0,9}$",
       required: true,
     },
@@ -33,39 +31,38 @@ export const CheckoutForm = () => {
     },
     {
       id: 3,
-      name: "Shipping-Date",
+      name: "ship_date",
       type: "date",
       placeholder: "Shipping Date",
-      label: "Shipping-Date",
+      label: "ship_date",
     },
     {
       id: 4,
-      name: "Shipping-Mode",
-      type: "checkbox",
-      placeholder: "Shipping Mode",
-      label: "Shipping-Mode",
-      checkboxValues: ["Economy", "Priority", "Intermediate"],
-      class: "ship-mode",
-    },
-    {
-      id: 5,
       name: "Category",
-      type: "checkbox",
-      placeholder: "Category",
-      label: "Category",
-      checkboxValues: ["Government", "Private", "Charity"],
-      class: "category",
-    },
-    {
-      id: 5,
-      name: "State",
       type: "text",
-      placeholder: "State",
-      label: "State",
+      placeholder: "Economy, Priority, Intermediate",
+      label: "Cateogry",
       required: true,
     },
     {
+      id: 5,
+      name: "Ship_mode",
+      type: "text",
+      placeholder: "Government, Charity, Private",
+      label: "Ship_mode",
+      required: true,
+    },
+
+    {
       id: 6,
+      name: "state",
+      type: "text",
+      placeholder: "State",
+      label: "state",
+      required: true,
+    },
+    {
+      id: 7,
       name: "City",
       type: "text",
       placeholder: "City",
@@ -73,11 +70,19 @@ export const CheckoutForm = () => {
       required: true,
     },
     {
-      id: 7,
-      name: "Pin-Code",
+      id: 8,
+      name: "pincode",
       type: "Number",
       placeholder: "Pin Code",
-      label: "Pin-Code",
+      label: "pincode",
+      required: true,
+    },
+    {
+      id: 9,
+      name: "blood_Type",
+      type: "text",
+      placeholder: "Blood Group",
+      label: "blood_Type",
       required: true,
     },
   ];
@@ -89,7 +94,7 @@ export const CheckoutForm = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log(inputs);
+
   return (
     <>
       <div className="app bg-red-400 ">
@@ -119,7 +124,13 @@ export const CheckoutForm = () => {
             </p>
           </div>
           <Link to="/order-complete">
-            <button className="submit bg-red-500" type="submit">
+            <button
+              className="submit bg-red-500"
+              type="submit"
+              onClick={(e) => {
+                setFormData(values);
+              }}
+            >
               Submit
             </button>
           </Link>

@@ -19,6 +19,13 @@ export const ExportCSV = ({ csvData, fileName }) => {
   };
 
   return (
-    <button onClick={(e) => exportToCSV(csvData, fileName)}>Export</button>
+    <div className="flex flex-row justify-center py-10">
+      <button
+        className="px-10 py-3 text-lg font-semibold bg-red-500 text-white"
+        onClick={(e) => exportToCSV(csvData, fileName)}
+      >
+        Export
+      </button>
+    </div>
   );
 };

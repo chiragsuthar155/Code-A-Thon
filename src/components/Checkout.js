@@ -1,13 +1,6 @@
 import React from "react";
 import { ExportCSV } from "./ExportCSV";
 export const Checkout = () => {
-  const fileName = "TechnicalAdda";
-
-  const viewers = [
-    { id: 1, name: "sakumar" },
-
-    { id: 2, name: "kumar" },
-  ];
   return (
     <>
       <div className="flex flex-row justify-center items-center">
@@ -22,7 +15,6 @@ export const Checkout = () => {
           </h1>
         </div>
       </div>
-      <ExportCSV csvData={viewers} fileName={fileName} />
     </>
   );
 };

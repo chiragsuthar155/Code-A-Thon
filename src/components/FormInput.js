@@ -31,20 +31,6 @@ export const FormInput = (props) => {
         ) : (
           ""
         )}
-        <div className="flex flex-row items-center justify-evenly">
-          {props.type === "checkbox"
-            ? props.checkboxValues.map((item) => (
-                <div className="flex flex-row items-center w-full my-5">
-                  <p className="w-full ml-10 ">{item}</p>
-                  <input
-                    type="checkbox"
-                    className={props.class}
-                    name={props.class}
-                  />
-                </div>
-              ))
-            : ""}
-        </div>
         <span className="error">{errorMessage}</span>
       </div>
     </>

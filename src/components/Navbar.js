@@ -32,11 +32,13 @@ export const Navbar = () => {
         </p>
       </Link>
       <div className="user-img flex flex-row items-center gap-2">
-        <img
-          className="rounded-full w-10 h-10"
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt="user img"
-        />
+        <Link to="/admin">
+          <img
+            className="rounded-full w-10 h-10"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+            alt="user img"
+          />
+        </Link>
         <p className="text-xl font-semibold cursor-pointer ">Hello, Aryan</p>
         <img
           className="h-5 cursor-pointer"
